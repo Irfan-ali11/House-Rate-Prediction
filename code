@@ -1,0 +1,14 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import linear_model
+obj=linear_model.LinearRegression()
+data=pd.read_csv("property.csv")
+area=data.drop("price",axis="columns")
+obj.fit(area,data)
+obj.predict([[3000]])
+obj.coef_
+obj.intercept_
+#intercept + coffe*inde_x
+#180616.43835616+135.78767123*3000
+© 2021 GitHub, Inc.
